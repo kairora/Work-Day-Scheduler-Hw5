@@ -23,6 +23,12 @@ textarea{
 
 .description{
   white-space: pre-wrap;
+  /* border-color: #06AED5; */
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #06AED5;
 }
 
 .time-block{
@@ -41,6 +47,7 @@ textarea{
   color: #000000;
   border-top: 1px dashed #000000;
   text-align: right;
+  font-weight: bold;
 }
 
 .past {
