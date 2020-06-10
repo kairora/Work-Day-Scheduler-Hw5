@@ -2,6 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-image: radial-gradient( rgba(127, 80, 255, 0.52), rgb(1, 1, 49));;
 }
 
 textarea{
@@ -16,15 +17,17 @@ textarea{
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
+  background-image: radial-gradient(#06AED5, rgba(127, 80, 255, 0.52));
 }
 
 .description{
   white-space: pre-wrap;
-  /* border-color: #06AED5; */
 }
+
+
 
 input:focus {
   outline: none !important;
@@ -48,21 +51,28 @@ input:focus {
   border-top: 1px dashed #000000;
   text-align: right;
   font-weight: bold;
+  background-color: rgba(127, 80, 255, 0.52);
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
+  color: #06AED5;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .saveBtn {

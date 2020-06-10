@@ -4,7 +4,6 @@ $(document).ready(function() {
     // var descripEl = $(".description");
     var topP = $("#currentDay");
     var hour = $(".hour");
-    var hourEl = $(".hour").text();
     var currentTime = m.format("hA");
     var timeArr = [];
 
@@ -17,7 +16,6 @@ $(document).ready(function() {
 
         var hourText = $(obj).text();
         var hourMoment = moment(hourText, "hA");
-        console.log(hourText)
         var descripEl = $(obj).next();
             // for each time block, check if the text matches the current time
             if (timeArr[index] == currentTime) {
@@ -33,23 +31,6 @@ $(document).ready(function() {
 
     });
     
-
-    
-    
-    // // loops through  the array of time blocks
-    // for (var i=0; i < timeArr.length; i++) {
-    //     // for each time block, check if the text matches the current time
-    //     if (timeArr[i] == currentTime) {
-    //         $(this).next().attr("class", "present");
-    //         console.log(this)
-            
-            // store that 
-            // var elNumber = newTimeArr[i];
-    //         // // var currentBlock = $( "containerEl div:nth-child(elNumber)" );
-    //         // $( "containerEl div:nth-child(2)" ).attr( "class", "present")
-
-        // }
-        // }
 
 
   });
