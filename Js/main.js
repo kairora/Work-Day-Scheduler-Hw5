@@ -14,29 +14,25 @@ $(document).ready(function() {
     // takes each hour's text and pushes into an array
     hour.each(function(index, obj) {
         timeArr.push($(obj).text());
-        
-        
-        var hourEl = $(obj).text();
+
+        var hourText = $(obj).text();
+        var hourMoment = moment(hourText, "hA");
+        console.log(hourText)
         var descripEl = $(obj).next();
-        console.log($(obj).next())
-        // var indexMoment = moment("hourEl").format("hA");
-        // console.log(indexMoment);
             // for each time block, check if the text matches the current time
             if (timeArr[index] == currentTime) {
                 // set the class present  on that timeblock's description element
-                $(obj).next().addClass("present");
-                   
-            // } else if (moment(indexMoment).isbefore(currentTime)) {
-            //     descripEl.addClass("future")
+                descripEl.addClass("present");
+            } else if (hourMoment.isBefore(moment())) {
+                $(obj).nextAll("input").addClass("past");
             }
             else {
-                descripEl.addClass("past");
+                descripEl.addClass("future");
             }
 
 
-    });console.log(timeArr[8]);
-    console.log(currentTime)
-    console.log(timeArr[8] == currentTime)
+    });
+    
 
     
     
