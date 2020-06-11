@@ -40,10 +40,9 @@ $(document).ready(function() {
 
           });
 
-          
+
         // load any saved data from localStorage. Tutor helped with the follow code
         $("#9AM .description").val(localStorage.getItem("9AM"));
-        console.log($("#9AM .description").val(localStorage.getItem("9AM")));
         $("#10AM .description").val(localStorage.getItem("10AM"));
         $("#11AM .description").val(localStorage.getItem("11AM"));
         $("#12PM .description").val(localStorage.getItem("12PM"));
@@ -53,10 +52,12 @@ $(document).ready(function() {
         $("#4PM .description").val(localStorage.getItem("4PM"));
         $("#5PM .description").val(localStorage.getItem("5PM"));
 
+        $(".clear").on("click", function() {
+            // clear from divs
+            $(".description").val("");
+            // clear in localStorage
+            localStorage.clear();
+
+          });
 
     });
-    
-
-    // $(document).on("click", ".saveBtn", saveItem)
-//   });
-
