@@ -17,10 +17,10 @@ textarea{
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: white;
+  color: rgb(1, 1, 61);
   border-radius: 0;
   border-bottom: 10px solid black;
-  background-image: radial-gradient(#06AED5, rgba(127, 80, 255, 0.52));
+  background-image: radial-gradient(#06AED5, rgba(127, 80, 255, 0.52), rgb(1, 1, 49));
 }
 
 .description{
