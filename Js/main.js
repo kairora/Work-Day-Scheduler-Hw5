@@ -9,8 +9,10 @@ $(document).ready(function() {
     var timeArr = [];
 
     // sets the date at the top of the scheduler
-    topDate = topP.text(m.format("dddd, MMMM Do"));
-
+    // topDate = topP.text(m.format("dddd, MMMM Do") + " at " + m.format("h:MM:ssA"));
+    function topClock() {
+        topP.text(m.format("dddd, MMMM Do") + " at " + m.format("h:mm:ss A"));
+    }
     // takes each hour's text and pushes into an array
     hour.each(function(index, obj) {
         timeArr.push($(obj).text());
@@ -32,14 +34,13 @@ $(document).ready(function() {
 
         // Tutor helped with the following code
         $(".saveBtn").on("click", function() {
-            // get nearby values
+            // get nearby input values
             var value = $(this).siblings(".description").val();
             var time = $(this).parent().attr("id");
             // save in localStorage
             localStorage.setItem(time, value);
 
           });
-
 
         // load any saved data from localStorage. Tutor helped with the follow code
         $("#9AM .description").val(localStorage.getItem("9AM"));
@@ -60,4 +61,6 @@ $(document).ready(function() {
 
           });
 
+        topClock();
+        setInterval(topClock, 1000);
     });
