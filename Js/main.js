@@ -1,7 +1,6 @@
 $(document).ready(function() {
     var m = moment();
     var containerEl = $(".container");
-    // var descripEl = $(".description");
     var topP = $("#currentDay");
     var hour = $(".hour");
     var inputEl = $(".description");
@@ -9,11 +8,11 @@ $(document).ready(function() {
     var timeArr = [];
 
     // sets the date at the top of the scheduler
-    // topDate = topP.text(m.format("dddd, MMMM Do") + " at " + m.format("h:MM:ssA"));
-    function topClock() {
-        topP.text(m.format("dddd, MMMM Do") + " at " + m.format("h:mm:ss A"));
-    }
-    // takes each hour's text and pushes into an array
+    topDate = topP.text(m.format("dddd, MMMM Do") + " at " + m.format("h:mm:ssA"));
+    
+      
+    
+    // takes each hour's text and pushes it into an array
     hour.each(function(index, obj) {
         timeArr.push($(obj).text());
 
@@ -32,7 +31,7 @@ $(document).ready(function() {
             }
     });
 
-        // Tutor helped with the following code
+        // Tutor helped with simplifying the following code
         $(".saveBtn").on("click", function() {
             // get nearby input values
             var value = $(this).siblings(".description").val();
@@ -42,7 +41,7 @@ $(document).ready(function() {
 
           });
 
-        // load any saved data from localStorage. Tutor helped with the follow code
+        // load any saved data from the localStorage. Tutor helped with simplifying the follow code
         $("#9AM .description").val(localStorage.getItem("9AM"));
         $("#10AM .description").val(localStorage.getItem("10AM"));
         $("#11AM .description").val(localStorage.getItem("11AM"));
@@ -61,6 +60,5 @@ $(document).ready(function() {
 
           });
 
-        topClock();
-        setInterval(topClock, 1000);
+        
     });
