@@ -40,3 +40,9 @@ $(".clear").on("click", function() {
 });
 ```
 
+### Link to the deployed app
+[Work Day Scheduler App](https://kairora.github.io/Work-Day-Scheduler-Hw5/)
+
+### Link to my GitHub Repo
+[My GitHub Repo](https://github.com/kairora/Work-Day-Scheduler-Hw5)
+
